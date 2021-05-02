@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap'); /*Anton*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); /*Proxima Nova*/
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); /*Lato*/
+/*We shouldn't need Anton, because we already have the titles on the main website page*/
+
+:root {
+    --vWid: 700px;
+    --lWidth: 200px;
+    --mar: 10px;
+    --height: 500px; /*Default height -> will need to change depending on the visualization*/
+}
+
+.vis {
+    width: var(--vWid);
+    height: var(--height);
+    float: left;
+}
+
+.legend {
+    width: var(--lWidth);
+    height: var(--height);
+    float: left;
+}
+
+.visSVG {
+    margin: var(--mar);
+    margin-right: 0px;
+    width: calc(var(--vWid) - var(--mar));
+}
+
+.legendSVG {
+    margin: var(--mar);
+    width: calc(var(--lWidth) - 2*var(--mar));
+}
+
+.axis-label { /* For the axis titles */
+    font-size: 16px;
+    font-family: 'Open Sans', 'sans-serif';
+}
+
+.graphTicks { /* For the graph numbers + province names */
+    font-size: 14px;
+    font-family: 'Lato', 'sans-serif';
+}
+
+.legend { /*For the legend titles*/
+    font-size: 16px;
+    font-family: 'Lato', 'sans-serif';
+}
+
+h1 {
+  position:relative;
+  font-size:30px;
+  margin-top:var(--mar);
+  margin-bottom:0;
+  margin-left:var(--mar);
+  color:#260a5a;
+  font-family:'Lato', 'sans-serif';
+}
+
+h2 {
+  position:relative;
+  font-size:15px;
+  margin-top:5px;
+  margin-bottom:var(--mar);
+  margin-left:var(--mar);
+  color:#734bc4;
+  font-family:'Lato', 'sans-serif';
+}
