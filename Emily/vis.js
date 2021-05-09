@@ -26,7 +26,7 @@ svg
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("Emily_Nie_Final_Data.csv").then(function(data){convert(data)});
+d3.csv("Emily_Nie.csv").then(function(data){convert(data)});
 
 function convert(beforeData) {
   var data = [];

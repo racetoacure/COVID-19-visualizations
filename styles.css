@@ -5,7 +5,7 @@
 
 :root {
     --vWid: 700px;
-    --lWidth: 200px;
+    --lWidth: 300px;
     --mar: 10px;
     --height: 500px; /*Default height -> will need to change depending on the visualization*/
 }
@@ -31,6 +31,7 @@
 .legendSVG {
     margin: var(--mar);
     width: calc(var(--lWidth) - 2*var(--mar));
+    height: inherit;
 }
 
 .axis-label { /* For the axis titles */
