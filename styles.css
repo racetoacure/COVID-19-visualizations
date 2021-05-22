@@ -68,3 +68,11 @@ h2 {
   color:#734bc4;
   font-family:'Lato', 'sans-serif';
 }
+
+.tooltip {
+    width: 100;
+    height: 70;
+    position: absolute;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 14px;
+}
