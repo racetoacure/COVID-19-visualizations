@@ -26,7 +26,7 @@ svg
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("Ria_Patel.csv").then(function(data){convert(data)});
+d3.csv("http://127.0.0.1:5500/Ria/Ria_Patel.csv").then(function(data){convert(data)});
 
 function convert(beforeData) {
   var data = [];
