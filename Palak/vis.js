@@ -68,14 +68,14 @@ function render(data) {
       .attr('transform', `translate(${margin.left}, 0)`);
 
   var xAxisLabel = "Date [2020]";
-  var yAxisLabel = "Current Hospitalizations"
+  var yAxisLabel = "ICU Cases"
   // Add X axis --> it is a date format
   var x = d3.scaleTime()
     .domain(d3.extent(data, function(d) { return d.date; }))
     .range([ 0, innerWidth ]);
   graph.append("g")
     .attr("transform", "translate(0," + innerHeight + ")")
-    .call(d3.axisBottom(x).ticks(10).tickFormat(d3.timeFormat("%b %d")));
+    .call(d3.axisBottom(x).ticks(13).tickFormat(d3.timeFormat("%b %d")));
   graph.append('text')
     .text(xAxisLabel)
     .attr('fill', 'black')
