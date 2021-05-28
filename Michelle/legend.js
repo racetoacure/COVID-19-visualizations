@@ -1,12 +1,12 @@
 var legend = d3.select(".legendSVG");
 
 // create a list of keys
-var keys = ["Ottawa", "Quebec", "BC", "Alberta", "Manitoba"];
+var keys = ["Hospital Beds","Hospitals","ICU beds","Ventilators"];
 //replace this with your keys
 
 var color = d3.scaleOrdinal()
   .domain(keys)
-  .range(colours);
+  .range(colours.slice(2));
 
 var offset = i => 50 + i*30;
 //Add one dot in the legend for each name.

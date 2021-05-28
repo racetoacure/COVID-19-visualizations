@@ -21,7 +21,7 @@
     var innerWidth = svgWidth - margin.right - margin.left;
 
     // import the data -> upload the data spreadsheet to github gist
-    d3.csv("http://127.0.0.1:5500/Cathy1/Cathy_Jian1.csv").then(
+    d3.csv("Cathy_Jian1.csv").then(
         function(beforeData) {
             convert(beforeData);
         }
@@ -110,7 +110,7 @@
             .style("border-width", "1px")
             .style("border-radius", "5px")
             .style("padding", "10px")
-        
+
         // Three function that change the tooltip when user hover / move / leave a cell
         var mouseover = function(d) {
             var subgroupName = d3.select(this.parentNode).datum().key;
@@ -120,19 +120,19 @@
                 .html("Category: " + subgroupName + "<br>" + "Cases: " + subgroupValue)
                 .style("opacity", 1)
         }
-        
+
         var mousemove = function(d) {
             tooltip
                 .style("left", (d.clientX+ 45) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
                 .style("top", (d.clientY) + "px")
         }
-        
+
         var mouseleave = function(d) {
             tooltip
                 .style("opacity", 0)
         }
 
-        
+
         graph.append("g")
             .selectAll("g")
             // Enter in the stack data = loop key per key = group per group
@@ -150,8 +150,8 @@
                 .on("mouseover", mouseover)
                 .on("mousemove", mousemove)
                 .on("mouseleave", mouseleave)
-        
-        
+
+
 
     }
 

@@ -1,7 +1,7 @@
 var legend = d3.select(".legendSVG");
 
 // create a list of keys
-var keys = ["Ottawa", "Quebec", "Alberta", "Manitoba"];
+var keys = ["Ottawa", "Quebec", "BC", "Alberta", "Manitoba"];
 //replace this with your keys
 
 var color = d3.scaleOrdinal()
