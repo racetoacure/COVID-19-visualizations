@@ -1,14 +1,14 @@
-var legend = d3.select(".legendSVG");
+var legend = d3.select("#legend2");
 
 // create a list of keys
-var keys = ["Recovered", "Active", "Confirmed"];
+var keys = ["Total"];
 //replace this with your keys
 
 var color = d3.scaleOrdinal()
   .domain(keys)
-  .range(colours);
+  .range(["#f6b737"]);
 
-var offset = i => 110+i*30;
+var offset = i => 140+i*30;
 //Add one dot in the legend for each name.
 legend.selectAll("circle")
   .data(keys)

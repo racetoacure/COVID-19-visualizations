@@ -2,10 +2,8 @@
     const svgHeight = 350;
     const svgWidth = 700;
 
-    const svg = d3.select('.vis')
-        .append("svg")
-            .attr('class', 'visSVG')
-            .attr('height', svgHeight);
+    const svg = d3.select('#vis1')
+        .attr('height', svgHeight);
 
     var nameEdgeLeft = 175;
     var numberEdge = 70;
@@ -21,7 +19,7 @@
     var innerWidth = svgWidth - margin.right - margin.left;
 
     // import the data -> upload the data spreadsheet to github gist
-    d3.csv("Cathy_Jian2.csv").then(
+    d3.csv("http://127.0.0.1:5500/Cathy2/Cathy_Jian2.csv").then(
         function(beforeData) {
             convert(beforeData);
         }
@@ -124,7 +122,7 @@
             var subgroupValue = d.target.__data__[1] - d.target.__data__[0];
             console.log(d);
             tooltip
-                .html("Category: " + subgroupName + "<br>" + "Cases: " + subgroupValue + "<br>" + "Total Tests: " + subgroupName)
+                .html("Category: " + subgroupName + "<br>" + "Cases: " + subgroupValue)
                 .style("opacity", 1)
         }
 

@@ -7,7 +7,7 @@
     --vWid: 700px;
     --lWidth: 200px;
     --mar: 10px;
-    --height: 500px; /*Default height -> will need to change depending on the visualization*/
+    --height: 300px; /*Default height -> will need to change depending on the visualization*/
 }
 
 .vis {

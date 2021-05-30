@@ -2,10 +2,8 @@
     const svgHeight = 350;
     const svgWidth = 700;
 
-    const svg = d3.select('.vis')
-        .append("svg")
-            .attr('class', 'visSVG')
-            .attr('height', svgHeight);
+    const svg = d3.select('#vis2')
+        .attr('height', svgHeight);
 
     var nameEdgeLeft = 175;
     var numberEdge = 70;
@@ -51,20 +49,20 @@
         const graph = svg.append('g')
             .attr('transform', `translate(${margin.left}, 0)`);
 
-        var subgroups = ["Recovered", "Active", "Confirmed"];
+        var subgroups = ["Total"];
         console.log(subgroups);
 
         var groups = ["Alberta", "Saskatchewan", "British Columbia"];
         console.log(groups);
 
         var xScale = d3.scaleLinear()
-            .domain([0, 175000])
+            .domain([0, 2550000])
             .range([0, innerWidth]);
 
         var xAxis = d3.axisBottom(xScale)
             .tickFormat(
                 function(d) {
-                    return(d/1000 + "K")
+                    return(d/1000000 + "M")
                 }
             );
 
@@ -102,7 +100,7 @@
 
         var color = d3.scaleOrdinal()
             .domain(subgroups)
-            .range(colours);
+            .range(["#f6b737"]);
 
         var stackedData = d3.stack()
             .keys(subgroups)
@@ -124,7 +122,7 @@
 
             var subgroupValue = d.target.__data__[1] - d.target.__data__[0];
             tooltip
-                .html("Category: " + subgroupName + "<br>" + "Cases: " + subgroupValue + "<br>" + "Total Tests: " + subgroupValue)
+                .html("Category: " + subgroupName + "<br>" + "Cases: " + subgroupValue)
                 .style("opacity", 1)
         }
         
