@@ -23,7 +23,7 @@ svg2
   .attr("height", svgHeight2)
 
 //Read the data
-d3.csv("Michelle_Lam3.csv").then(
+d3.csv("http://127.0.0.1:5500/Michelle/Michelle_Lam3.csv").then(
 
 function(data) {
 
