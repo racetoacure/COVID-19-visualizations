@@ -19,7 +19,7 @@
     var innerWidth = svgWidth - margin.right - margin.left;
 
     // import the data -> upload the data spreadsheet to github gist
-    d3.csv("http://127.0.0.1:5500/Cathy2/Cathy_Jian2.csv").then(
+    d3.csv("/Cathy2/Cathy_Jian2.csv").then(
         function(beforeData) {
             convert(beforeData);
         }
