@@ -73,7 +73,6 @@
         callxAxis.append('text')
             .attr('class', 'axis-label')
             .attr('dominant-baseline', 'bottom')
-            .attr('text-anchor', 'middle')
             .attr('x', margin.left + (innerWidth / 2))
             .attr('y', innerHeight)
             .text('Number of Cases [2020]');
@@ -91,9 +90,7 @@
         callyAxis.append('text')
             .attr('class', 'axis-label')
             .attr('dominant-baseline', 'top')
-            .attr('text-anchor', 'middle')
             .attr('transform', `rotate(-90)`)
-            .attr('fill', 'black')
             .attr('y', -(margin.left / 2) - 50)
             .attr('x', -(innerHeight / 2))
             .text('Provinces');
@@ -110,11 +107,6 @@
             .append("div")
             .style("opacity", 0)
             .attr("class", "tooltip")
-            .style("background-color", "white")
-            .style("border", "solid")
-            .style("border-width", "1px")
-            .style("border-radius", "5px")
-            .style("padding", "10px")
         
         // Three function that change the tooltip when user hover / move / leave a cell
         var mouseover = function(d) {

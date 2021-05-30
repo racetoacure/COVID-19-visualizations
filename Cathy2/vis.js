@@ -68,7 +68,6 @@
         callxAxis.append('text')
             .attr('class', 'axis-label')
             .attr('dominant-baseline', 'bottom')
-            .attr('text-anchor', 'middle')
             .attr('x', margin.left + (innerWidth / 2))
             .attr('y', innerHeight)
             .text('Number of Cases [2020]');
@@ -86,9 +85,7 @@
         callyAxis.append('text')
             .attr('class', 'axis-label')
             .attr('dominant-baseline', 'top')
-            .attr('text-anchor', 'middle')
             .attr('transform', `rotate(-90)`)
-            .attr('fill', 'black')
             .attr('y', -(margin.left / 2) - 50)
             .attr('x', -(innerHeight / 2))
             .text('Provinces');
