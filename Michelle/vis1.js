@@ -3,9 +3,9 @@ const svgWidth = 700;
 
 const svg = d3.select('.vis1SVG');
 
-var nameEdgeLeft = 250; // if names are on left axis
+var nameEdgeLeft = 100; // if names are on left axis
 var nameEdgeBottom = 50; // CHANGED FOR THIS VIS BECAUSE SPACING
-var numberEdge = 120; // CHANGED FOR THIS VIZ BECAUSE NUMBERS BIG
+var numberEdge = 65; // CHANGED FOR THIS VIZ BECAUSE NUMBERS BIG
 
 var margin = {
     top: 0, // top margin
@@ -25,7 +25,7 @@ svg
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("http://127.0.0.1:5500/Michelle/Michelle_Lam1.csv",
+d3.csv("Michelle_Lam1.csv",
     function(d){
         return {
             date: new Date(d.Date),
@@ -80,7 +80,7 @@ d3.csv("http://127.0.0.1:5500/Michelle/Michelle_Lam1.csv",
             )
     });
 
-d3.csv("http://127.0.0.1:5500/Michelle/Michelle_Lam2.csv",
+d3.csv("Michelle_Lam2.csv",
     function(d){
         return {
             date: new Date(d.Date),

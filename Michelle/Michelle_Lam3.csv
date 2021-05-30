@@ -1,7 +1,5 @@
-group,Hospital Beds,Hospitals,ICU beds,Ventilators
-Northern Alberta,929,33,12,33
-Edmonton,3020,12,150,205
-Central Alberta,1098,30,12,27
-Calgary,2791,13,97,213
-Southern Alberta,645,12,24,31
-Total,8483,100,295,519
+type,typenospace,northAB,edmonton,calgary,centreAB,southernAB,total
+Hospital Beds,HospitalBed,929,3020,2791,1098,645,8483
+Hospitals,Hospitals,33,12,30,13,12,100
+ICU Beds,ICUBeds,12,150,12,97,24,295
+Ventilators,Ventilators,33,205,27,213,31,519

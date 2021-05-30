@@ -20,7 +20,7 @@
     var innerHeight = svgHeight - margin.top - margin.bottom;
     var innerWidth = svgWidth - margin.right - margin.left;
 
-    // import the data -> upload the data spreadsheet to github gist
+    // import the data
     d3.csv("Cathy_Jian1.csv").then(
         function(beforeData) {
             convert(beforeData);
@@ -37,7 +37,7 @@
                 ICU: +row.icu,
                 Deaths: +row.deaths
             }
-            rowNumber = rowNumber+1;
+            rowNumber++;
         })
         console.log(data);
         render(data);
