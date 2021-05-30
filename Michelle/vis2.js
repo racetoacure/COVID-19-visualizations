@@ -63,8 +63,7 @@ const render = function(data) {
             var spacing = 0;
             for (var i = 0; i !==7; i++ ) {
                 graph.append('line')
-                    .attr('stroke', 'grey')
-                    .attr('width', 1)
+                    .attr('class', 'separateLine')
                     .attr('y1', 0)
                     .attr('y2', innerHeight2)
                     .attr('x1', spacing+0.5)
@@ -72,8 +71,7 @@ const render = function(data) {
                 spacing = spacing+(innerWidth2/6);
             }
             graph.append('line')
-                .attr('stroke', 'grey')
-                .attr('width', 1)
+                .attr('class', 'separateLine')
                 .attr('y1', 0.5)
                 .attr('y2', 0.5)
                 .attr('x1', 0)
@@ -88,11 +86,6 @@ const render = function(data) {
             .append("div")
             .style("opacity", 0)
             .attr("class", "tooltip")
-            .style("background-color", "white")
-            .style("border", "solid")
-            .style("border-width", "1px")
-            .style("border-radius", "5px")
-            .style("padding", "10px")
 
         var mouseover = function(d) {
             tooltip
@@ -104,7 +97,7 @@ const render = function(data) {
                         "<br>" + "South: " + d.target.__data__.SouthernAlberta +
                         "<br>" + "Total: " + d.target.__data__.Total)
                 .style("opacity", 1);
-            d3.selectAll('.myRect').style("opacity", 0.2);
+            d3.selectAll('.myRect').style("opacity", 0.4);
             
             d3.selectAll('.'+d.target.__data__.TypeNoSpace).style("opacity", 1);
         }
@@ -137,9 +130,7 @@ const render = function(data) {
             .append('text')
                 .attr('class', 'axis-label')
                 .attr('dominant-baseline', 'top')
-                .attr('text-anchor', 'middle')
                 .attr('transform', `rotate(-90)`)
-                .attr('fill', 'black')
                 .attr('y', -(margin1.left / 2) - 40)
                 .attr('x', -(innerHeight2 / 2))
                 .text('Provinces');
@@ -147,8 +138,6 @@ const render = function(data) {
         graph.append('text')
             .attr('class', 'axis-label')
             .attr('dominant-baseline', 'bottom')
-            .attr('text-anchor', 'middle')
-            .attr('fill', 'black')
             .attr('x', innerWidth2/2)
             .attr('y', innerHeight2+70)
             .text('Location')

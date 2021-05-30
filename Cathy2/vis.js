@@ -19,7 +19,7 @@
     var innerWidth = svgWidth - margin.right - margin.left;
 
     // import the data -> upload the data spreadsheet to github gist
-    d3.csv("/Cathy2/Cathy_Jian2.csv").then(
+    d3.csv("Cathy_Jian2.csv").then(
         function(beforeData) {
             convert(beforeData);
         }
@@ -59,11 +59,7 @@
             .range([0, innerWidth]);
 
         var xAxis = d3.axisBottom(xScale)
-            .tickFormat(
-                function(d) {
-                    return(d/1000 + "K")
-                }
-            );
+            .tickFormat(function(d) { return(d/1000 + "K") });
 
         var callxAxis = graph.append('g')
             .call(xAxis)
@@ -109,11 +105,6 @@
             .append("div")
             .style("opacity", 0)
             .attr("class", "tooltip")
-            .style("background-color", "white")
-            .style("border", "solid")
-            .style("border-width", "1px")
-            .style("border-radius", "5px")
-            .style("padding", "10px")
 
         // Three function that change the tooltip when user hover / move / leave a cell
         var mouseover = function(d) {

@@ -87,7 +87,6 @@ function render(data) {
     .call(d3.axisBottom(x1).ticks(10).tickFormat(d3.timeFormat("%b %d")));
   graph1.append('text')
     .text(xAxisLabel1)
-    .attr('fill', 'black')
     .attr('class', 'axis-label')
     .attr('y', innerHeight/2 + 50)
     .attr('x', innerWidth / 2 - 30 );
@@ -100,12 +99,10 @@ function render(data) {
     .call(d3.axisLeft(y1).ticks(3).tickFormat(d3.format(".1s")));
   graph1.append('text')
     .text(yAxisLabel1)
-    .attr('fill', 'black')
     .attr('class', 'axis-label')
     .attr('transform', 'rotate(-90)')
     .attr('y', '-50')
-    .attr('x', -innerHeight / 4 + 15)
-    .style('text-anchor', 'middle');
+    .attr('x', -innerHeight / 4 + 15);
   // color palette
   var res = sumstat.map(function(d){ return d.key }) // list of group names
   var color = d3.scaleOrdinal()
@@ -143,7 +140,6 @@ function render(data) {
     .call(d3.axisBottom(x2).ticks(0).tickFormat(d3.timeFormat("%b %d")));
   graph2.append('text')
     .text(xAxisLabel2)
-    .attr('fill', 'black')
     .attr('class', 'axis-label')
     .attr('y', innerHeight/2+10)
     .attr('x', innerWidth / 2 - 30 );
@@ -156,12 +152,10 @@ function render(data) {
     .call(d3.axisLeft(y2).ticks(3).tickFormat(d3.format(".1s")));
   graph2.append('text')
     .text(yAxisLabel2)
-    .attr('fill', 'black')
     .attr('class', 'axis-label')
     .attr('transform', 'rotate(-90)')
     .attr('y', '-50')
-    .attr('x', -innerHeight / 4 + 15)
-    .style('text-anchor', 'middle');
+    .attr('x', -innerHeight / 4 + 15);
   // color palette
   var res = sumstat.map(function(d){ return d.key }) // list of group names
   var color = d3.scaleOrdinal()

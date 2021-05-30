@@ -59,12 +59,10 @@ d3.csv("Michelle_Lam1.csv",
             .call(d3.axisLeft(y1).ticks(4).tickFormat(d3.format(".1s")));
         graph1.append('text')
             .text(yAxisLabel1)
-            .attr('fill', 'black')
             .attr('class', 'axis-label')
             .attr('transform', 'rotate(-90)')
             .attr('y', '-45')
-            .attr('x', -innerHeight / 2 + 120)
-            .style('text-anchor', 'middle');
+            .attr('x', -innerHeight / 2 + 120);
 
         // Draw the line
         graph1
@@ -112,8 +110,6 @@ d3.csv("Michelle_Lam2.csv",
         graph2.append('text')
             .text(xAxisLabel2)
             .attr('dominant-baseline', 'bottom')
-            .attr('text-anchor', 'middle')
-            .attr('fill', 'black')
             .attr('class', 'axis-label')
             .attr('y', innerHeight/ 2 + 40)
             .attr('x', innerWidth / 2);
@@ -128,12 +124,10 @@ d3.csv("Michelle_Lam2.csv",
         
         graph2.append('text')
             .text(yAxisLabel2)
-            .attr('fill', 'black')
             .attr('class', 'axis-label')
             .attr('transform', 'rotate(-90)')
             .attr('y', '-45')
-            .attr('x', -innerHeight / 2 + 120)
-            .style('text-anchor', 'middle');
+            .attr('x', -innerHeight / 2 + 120);
 
         // Draw the line
         graph2
