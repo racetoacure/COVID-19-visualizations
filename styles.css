@@ -14,6 +14,8 @@
     width: var(--vWid);
     height: var(--height);
     float: left;
+    overflow: visible;
+    clear:left;
 }
 
 .visNoLegend {
@@ -32,7 +34,13 @@
 .visSVG {
     margin: var(--mar);
     margin-right: 0px;
+    overflow: visible;
     width: calc(var(--vWid) - var(--mar));
+}
+
+.vis1SVG {
+  overflow-x: visible;
+  white-space:nowrap;
 }
 
 .legendSVG {
@@ -99,7 +107,9 @@ h3 {
     font-family: 'Lato', 'sans-serif';
     font-size: 14px;
 }
-
+g {
+  overflow:visible;
+}
 text {
   font-size:10pt;
   font-family:'Lato','sans-serif';
@@ -108,4 +118,26 @@ text {
 .separateLine {
     stroke: lightgrey;
     width: 1px;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: steelblue;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+
+.tooltip-date, .tooltip-cases {
+    font-weight: bold;
 }

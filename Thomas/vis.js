@@ -40,7 +40,7 @@ function convert(beforeData) {
         }
         rowNumber = rowNumber+1;
     })
-    render(data); 
+    render(data);
 }
 
 const render = function(data) {
@@ -67,12 +67,12 @@ const render = function(data) {
 
     // Y AXIS
 
-    const yAxisLabel = "Cases"
+    const yAxisLabel = "Value"
 
     const yScale = d3.scaleLinear()
         .domain([0, 2.6])
         .range([ innerHeight, 0 ]);
-    
+
     graph.append('g')
         .call(d3.axisLeft(yScale))
         .append('text')
@@ -127,7 +127,7 @@ const render = function(data) {
         var type = d.target.__data__.key;
         var fullType = "";
         var number = d.target.__data__.value;
-        
+
         const check = function (d) {
             console.log("hellllo")
             data.forEach(function (location) {
@@ -144,7 +144,7 @@ const render = function(data) {
                     }
                 };
             })
-        
+
             for (var i = 0; i < 11; i++) {
                 console.log(names);
                 console.log(selectedLocation);
@@ -156,24 +156,24 @@ const render = function(data) {
         check(d);
 
         tooltip
-            .html("Location: " + selectedLocation + 
+            .html("Location: " + selectedLocation +
                 "<br>" + "Type: " + fullType +
-                "<br>" + "Cases: " + d.target.__data__.value)
+                "<br>" + "Value: " + d.target.__data__.value)
             .style("opacity", 1);
         d3.selectAll('.myRect').style("opacity", 0.4);
-    
+
         d3.selectAll('.'+d.target.__data__.key).style("opacity", 1);
     }
 
     var mousemove = function(d) {
         tooltip
-            .style("left", (d.clientX+ 30) + "px") 
+            .style("left", (d.clientX+ 30) + "px")
             .style("top", (d.clientY) + "px")
     }
 
     var mouseleave = function(d) {
         tooltip.style("opacity", 0)
-    
+
         d3.selectAll('.myRect').style("opacity", 1);
     }
 
@@ -206,7 +206,7 @@ const render = function(data) {
 
 
     // BARS
-    
+
     graph.append("g")
         .selectAll("g")
         .data(data).enter().append("g")

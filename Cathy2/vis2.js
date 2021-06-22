@@ -107,7 +107,7 @@
             .append("div")
             .style("opacity", 0)
             .attr("class", "tooltip")
-        
+
         // Three function that change the tooltip when user hover / move / leave a cell
         var mouseover = function(d) {
             var subgroupName = d3.select(this.parentNode).datum().key;
@@ -117,13 +117,13 @@
                 .html("Category: " + subgroupName + "<br>" + "Cases: " + subgroupValue)
                 .style("opacity", 1)
         }
-        
+
         var mousemove = function(d) {
             tooltip
                 .style("left", (d.clientX+ 45) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
                 .style("top", (d.clientY) + "px")
         }
-        
+
         var mouseleave = function(d) {
             tooltip
                 .style("opacity", 0)

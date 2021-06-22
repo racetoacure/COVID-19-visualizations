@@ -45,7 +45,6 @@ function convert(beforeData) {
         }
         rowNumber++;
     })
-    console.log(data);
     render(data);
 }
 
@@ -89,7 +88,7 @@ const render = function(data) {
 
         var mouseover = function(d) {
             tooltip
-                .html("Acute Care Service: " + d.target.__data__.Type + 
+                .html("Acute Care Service: " + d.target.__data__.Type +
                         "<br>" + "North: " + d.target.__data__.NorthernAlberta +
                         "<br>" + "Edmonton: " + d.target.__data__.Edmonton +
                         "<br>" + "Calgary: " + d.target.__data__.Calgary +
@@ -98,19 +97,19 @@ const render = function(data) {
                         "<br>" + "Total: " + d.target.__data__.Total)
                 .style("opacity", 1);
             d3.selectAll('.myRect').style("opacity", 0.4);
-            
+
             d3.selectAll('.'+d.target.__data__.TypeNoSpace).style("opacity", 1);
         }
 
         var mousemove = function(d) {
             tooltip
-                .style("left", (d.clientX+ 30) + "px") 
-                .style("top", (d.clientY) + "px")
+                .style("left", (d.clientX+ 30) + "px")
+                .style("top", (d.clientY+100) + "px")
         }
 
         var mouseleave = function(d) {
             tooltip.style("opacity", 0)
-            
+
             d3.selectAll('.myRect').style("opacity", 1);
         }
 
@@ -123,7 +122,7 @@ const render = function(data) {
             .domain(subgroups)
             .range([0, innerHeight2])
             .padding(0.2)
-    
+
         const callyScale = graph.append('g')
             .call(d3.axisLeft(yScale))
             .attr('class', 'graphTicks')
@@ -134,7 +133,7 @@ const render = function(data) {
                 .attr('y', -(margin1.left / 2) - 40)
                 .attr('x', -(innerHeight2 / 2))
                 .text('Provinces');
-        
+
         graph.append('text')
             .attr('class', 'axis-label')
             .attr('dominant-baseline', 'bottom')
@@ -150,7 +149,7 @@ const render = function(data) {
         const northX = d3.scaleLinear()
             .domain([0, 1250])
             .range([0, innerWidth2/6]);
-        
+
         const callNorthX = northGraph.append('g')
             .call(d3.axisBottom(northX)
                 .ticks(2)
@@ -164,7 +163,7 @@ const render = function(data) {
                 .attr('x', innerWidth2 / 12)
                 .attr('y', spaceFromXAxis)
                 .text('North');
-        
+
         const northBars = northGraph.selectAll('rect')
             .data(data).enter().append('rect')
                 .attr('class', function(d) {return 'myRect ' + d.TypeNoSpace})
@@ -186,7 +185,7 @@ const render = function(data) {
         const edmontonX = d3.scaleLinear()
             .domain([0, 3900])
             .range([0, innerWidth2/6]);
-        
+
         const callEdmontonX = edmontonGraph.append('g')
             .call(d3.axisBottom(edmontonX)
                 .ticks(2)
@@ -223,7 +222,7 @@ const render = function(data) {
         const calgaryX = d3.scaleLinear()
             .domain([0, 3000])
             .range([0, innerWidth2/6]);
-        
+
         const callcalgaryX = calgaryGraph.append('g')
             .call(d3.axisBottom(calgaryX)
                 .ticks(2)
@@ -260,7 +259,7 @@ const render = function(data) {
         const centreX = d3.scaleLinear()
             .domain([0, 1500])
             .range([0, innerWidth2/6]);
-        
+
         const callCentreX = centreGraph.append('g')
             .call(d3.axisBottom(centreX)
                 .ticks(2)
@@ -297,7 +296,7 @@ const render = function(data) {
         const southX = d3.scaleLinear()
             .domain([0, 800])
             .range([0, innerWidth2/6]);
-        
+
         const callSouthX = southGraph.append('g')
             .call(d3.axisBottom(southX)
                 .ticks(2))
@@ -333,7 +332,7 @@ const render = function(data) {
         const totalX = d3.scaleLinear()
             .domain([0, 10000])
             .range([0, innerWidth2/6]);
-        
+
         const callTotalX = totalGraph.append('g')
             .call(d3.axisBottom(totalX)
                 .ticks(2)
