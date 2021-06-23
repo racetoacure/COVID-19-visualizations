@@ -1,5 +1,5 @@
 const svgHeight = 500;
-const svgWidth = 700;
+const svgWidth = 680;
 
 const svg = d3.select('.visSVG');
 
@@ -116,5 +116,5 @@ function render(data) {
           (d.values)
         })
 
-  
+
 }
