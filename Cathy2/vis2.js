@@ -73,8 +73,8 @@
         callxAxis.append('text')
             .attr('class', 'axis-label')
             .attr('dominant-baseline', 'bottom')
-            .attr('x', margin.left + (innerWidth / 2))
-            .attr('y', innerHeight)
+            .attr('x', (innerWidth / 2))
+            .attr('y', 55)
             .text('Number of Cases [2020]');
 
         var yScale = d3.scaleBand()
