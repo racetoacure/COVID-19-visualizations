@@ -1,5 +1,5 @@
 const svgHeight = 465;
-const svgWidth = 700;
+const svgWidth = 900;
 
 const svg = d3.select('.vis1SVG');
 
@@ -9,7 +9,7 @@ var numberEdge = 65; // CHANGED FOR THIS VIZ BECAUSE NUMBERS BIG
 
 var margin = {
     top: 0, // top margin
-    right: -40, // right margin
+    right: 160, // right margin
     left: numberEdge,
     bottom: nameEdgeBottom
 }
@@ -83,7 +83,7 @@ d3.csv("Michelle_Lam1.csv",
 
             focus.append("rect")
                 .attr("class", "tooltip")
-                .attr("width", 120)
+                .attr("width", 125)
                 .attr("height", 50)
                 .attr("x", 10)
                 .attr("y", -2)

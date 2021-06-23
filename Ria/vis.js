@@ -4,7 +4,7 @@ const svgWidth = 700;
 const svg = d3.select('.visSVG');
 
 var nameEdgeLeft = 250; // if names are on left axis
-var nameEdgeBottom = 70; // if names are on bottom axis
+var nameEdgeBottom = 50; // if names are on bottom axis
 var numberEdge = 70;
 
 var margin = {

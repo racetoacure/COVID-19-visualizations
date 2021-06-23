@@ -19,7 +19,7 @@
 }
 
 .visNoLegend {
-    width: var(--vWid);
+    width: calc(var(--vWid)+var(--lWidth));
     height: var(--height);
     float: none;
 }

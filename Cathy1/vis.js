@@ -8,7 +8,7 @@
             .attr('height', svgHeight);
 
     var nameEdgeLeft = 175;
-    var numberEdge = 70;
+    var numberEdge = 50;
 
     var margin = {
         top: 0, // top margin
