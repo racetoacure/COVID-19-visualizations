@@ -116,8 +116,8 @@
 
         var mousemove = function(d) {
             tooltip
-            .style("left", (d.clientX+ 10) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-            .style("top", (d.clientY -60) + "px")
+            .style("left", (d.pageX+ 10) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+            .style("top", (d.pageY -60) + "px")
         }
 
         var mouseleave = function(d) {
