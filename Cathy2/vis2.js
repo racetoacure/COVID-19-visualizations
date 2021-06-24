@@ -38,9 +38,7 @@
             }
             rowNumber = rowNumber+1;
         })
-        console.log(data);
         render1(data); // top graph with recovered, active, confirmed
-        render2(data); // bottom graph with total
     }
 
     const render1 = function(data) {
@@ -50,10 +48,9 @@
             .attr('transform', `translate(${margin.left}, 0)`);
 
         var subgroups = ["Total"];
-        console.log(subgroups);
+
 
         var groups = ["Alberta", "Saskatchewan", "British Columbia"];
-        console.log(groups);
 
         var xScale = d3.scaleLinear()
             .domain([0, 2550000])
