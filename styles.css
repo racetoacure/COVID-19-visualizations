@@ -111,6 +111,7 @@ h3 {
     position: absolute;
     font-family: 'Lato', 'sans-serif';
     font-size: 14px;
+    white-space: nowrap;
     z-index:100000;
 }
 g {
