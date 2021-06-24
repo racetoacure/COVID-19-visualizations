@@ -1,4 +1,6 @@
 var legend = d3.select(".legendSVG");
+legend
+  .attr("height", 500);
 
 // create a list of keys
 var keys = ["Ottawa", "Quebec", "Alberta", "Manitoba"];
