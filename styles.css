@@ -110,6 +110,7 @@ h3 {
     position: absolute;
     font-family: 'Lato', 'sans-serif';
     font-size: 14px;
+    z-index:100000;
 }
 g {
   overflow:visible;
