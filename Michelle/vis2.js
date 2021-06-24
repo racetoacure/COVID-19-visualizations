@@ -104,7 +104,7 @@ const render = function(data) {
         var mousemove = function(d) {
             tooltip
                 .style("left", (d.clientX + 10) + "px")
-                .style("top", (d.clientY - 300) + "px")
+                .style("top", (d.clientY - svgHeight + 130) + "px")
         }
 
         var mouseleave = function(d) {
