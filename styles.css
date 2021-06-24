@@ -21,7 +21,6 @@
 
 .visNoLegend {
     width: calc(var(--vWid)+var(--lWidth));
-    height: var(--height);
     float: none;
     position:relative;
     display:block;
