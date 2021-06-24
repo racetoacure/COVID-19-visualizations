@@ -8,7 +8,7 @@ var color = d3.scaleOrdinal()
   .domain(keys)
   .range(colours);
 
-var offset = i => 110+i*30;
+var offset = i => 50+i*30;
 //Add one dot in the legend for each name.
 legend.selectAll("circle")
   .data(keys)

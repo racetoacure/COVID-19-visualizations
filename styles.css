@@ -28,7 +28,7 @@
 
 .legend {
     width: var(--lWidth);
-    height: 1500px;
+    height: 200px;
     float: left;
     position:relative;
     display:inline-block;

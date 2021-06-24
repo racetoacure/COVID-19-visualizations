@@ -8,7 +8,7 @@ var color = d3.scaleOrdinal()
     .domain(keys)
     .range([colours[2],colours[2],colours[3],colours[3]]);
 
-var offset = 200;
+var offset = 50;
 
 var offset1 = i => offset + i*60;
 var offset2 = i => offset + i*30;
