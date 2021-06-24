@@ -158,7 +158,7 @@ const render = function(data) {
         tooltip
             .html("Location: " + selectedLocation +
                 "<br>" + "Type: " + fullType +
-                "<br>" + "Value: " + d3.format(".3")(d.target.__data__.value))
+                "<br>" + "Value: ~" + d3.format(".3")(d.target.__data__.value))
             .style("opacity", 1);
         d3.selectAll('.myRect').style("opacity", 0.4);
 
