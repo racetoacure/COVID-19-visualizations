@@ -75,7 +75,7 @@
             .attr('dominant-baseline', 'bottom')
             .attr('x', (innerWidth / 2))
             .attr('y', 55)
-            .text('Number of Cases [2020]');
+            .text('Total Tests Completed [2020]');
 
         var yScale = d3.scaleBand()
             .domain(groups)
