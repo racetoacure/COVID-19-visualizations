@@ -107,7 +107,7 @@ d3.csv("Michelle_Lam1.csv",
             graph1.append("rect")
                 .attr("class", "overlay")
                 .attr("width", innerWidth)
-                .attr("height", innerHeight)
+                .attr("height", innerHeight /2)
                 .on("mouseover", function() { focus.style("opacity", 1); })
                 .on("mouseout", function() { focus.style("opacity", 0); })
                 .on("mousemove", mousemove);
@@ -225,7 +225,7 @@ d3.csv("Michelle_Lam2.csv",
         graph2.append("rect")
             .attr("class", "overlay")
             .attr("width", innerWidth)
-            .attr("height", innerHeight)
+            .attr("height", innerHeight/2)
             .on("mouseover", function() { focus.style("opacity", 1); })
             .on("mouseout", function() { focus.style("opacity", 0); })
             .on("mousemove", mousemove);
